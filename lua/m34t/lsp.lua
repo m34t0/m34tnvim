@@ -24,3 +24,12 @@ vim.lsp.config("vuels", {
   end,
 })
 vim.lsp.enable("vuels")
+
+vim.lsp.config("gopls", {
+  on_init = function()
+    print("gopls running in background")
+  end,
+  on_attach = function()
+  end,
+})
+vim.lsp.enable("gopls")

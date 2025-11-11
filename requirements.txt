@@ -15,3 +15,6 @@ Lsp:
 			npm install -g @vue/language-server
 		- @vue/typescript-plugin
 			npm install -g @vue/typescript-plugin
+	4) go
+		- gopls // https://go.dev/gopls/
+			go install golang.org/x/tools/gopls@latest
