@@ -9,7 +9,7 @@ vim.lsp.enable("luals")
 
 vim.lsp.config("tsls", {
   on_init = function()
-    print("tsls is running in backround")
+    print("tsls is running in background")
   end,
   on_attach = function()
   end,
@@ -18,7 +18,7 @@ vim.lsp.enable("tsls")
 
 vim.lsp.config("vuels", {
   on_init = function()
-    print("vuels is running in backround")
+    print("vuels is running in background")
   end,
   on_attach = function()
   end,
@@ -33,3 +33,12 @@ vim.lsp.config("gopls", {
   end,
 })
 vim.lsp.enable("gopls")
+
+vim.lsp.config("clangd", {
+  on_init = function ()
+    print("clangd running in background")
+  end,
+  on_attach = function ()
+  end,
+})
+vim.lsp.enable("clangd")
