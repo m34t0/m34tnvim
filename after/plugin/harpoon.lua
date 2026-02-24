@@ -132,4 +132,8 @@ local function toggle_telescope(harpoon_files)
 end
 
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end)
+-- vim.keymap.set("n", "<C-e>", function() toggle_telescope(harpoon:list()) end)
+vim.keymap.set("n", "<C-e>", function()
+  Show_custom_popup("Harpoon", get_paths(harpoon:list()), function()
+  end)
+end)
