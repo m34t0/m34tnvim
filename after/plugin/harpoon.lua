@@ -47,13 +47,10 @@ local function toggle_telescope(harpoon_files)
   telescope_pickers.new({}, {
     prompt_title = "Harpoon",
     finder = make_finder(file_paths),
-    previewer = telescope_config.file_previewer({}),
-    sorter = telescope_config.generic_sorter({}),
     layout_strategy = "vertical",
     layout_config = {
       vertical = {
         width = 0.9,
-        preview_height = 0.4,
       },
     },
     initial_mode = "normal",
