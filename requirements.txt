@@ -1,5 +1,6 @@
 Telescope:
- - ripgrep to grep strings in working directory (brew install ripgrep)
+	1) ripgrep to grep strings in working directory
+		- brew install ripgrep
 
 Lsp:
 	1) lua
@@ -18,3 +19,7 @@ Lsp:
 	4) go
 		- gopls // https://go.dev/gopls/
 			go install golang.org/x/tools/gopls@latest
+
+Treesitter:
+	1) tree-sitter-cli
+		- brew install tree-sitter-cli
