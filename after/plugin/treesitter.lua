@@ -1,13 +1,4 @@
-local tree_sitter = require("nvim-treesitter")
+local treesitter = require("nvim-treesitter")
+local treesitter_langs = require("m34t.treesitter_langs")
 
-tree_sitter.install {
-  "c",
-  "lua",
-  "vim",
-  "vimdoc",
-  "query",
-  "markdown",
-  "markdown_inline",
-  "javascript",
-  "typescript",
-}
+treesitter.install(treesitter_langs)
