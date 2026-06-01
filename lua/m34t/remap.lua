@@ -21,3 +21,4 @@ vim.keymap.set("n", "<leader>pc", function()
 end, { desc = "Copy relative path to current file" })
 
 vim.keymap.set("n", "<leader>pcw", "\"+yiw", { desc = "Copy word under the cursor to clipboard" })
+vim.keymap.set("n", "<leader>n", "<cmd>noh<CR>", { desc = "Remove highlight" })
