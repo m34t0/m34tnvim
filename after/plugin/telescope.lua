@@ -1,10 +1,19 @@
 local telescope = require("telescope")
 local builtin = require("telescope.builtin")
+local actions = require("telescope.actions")
 
 telescope.setup({
   defaults = {
     layout_config = {
       width = 0.9,
+    },
+    mappings = {
+      i = {
+        ["<C-r>"] = actions.send_selected_to_qflist + actions.open_qflist,
+      },
+      n = {
+        ["<C-r>"] = actions.send_selected_to_qflist + actions.open_qflist,
+      },
     },
   },
 })
