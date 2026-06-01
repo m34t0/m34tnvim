@@ -13,8 +13,8 @@ end, { desc = "Jump to definition of symbol under cursor" })
 
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
-vim.keymap.set("n", "]g", vim.diagnostic.goto_next, { desc = "Jump to next error" })
-vim.keymap.set("n", "[g", vim.diagnostic.goto_prev, { desc = "Jump to prev error" })
+vim.keymap.set("n", "]g", function() vim.diagnostic.jump({ count = 1 }) end, { desc = "Jump to next error" })
+vim.keymap.set("n", "[g", function() vim.diagnostic.jump({ count = -1 }) end, { desc = "Jump to prev error" })
 
 vim.keymap.set("n", "<leader>pc", function()
   vim.fn.setreg("+", vim.fn.expand("%:."))
