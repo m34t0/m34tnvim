@@ -1,4 +1,14 @@
-local path_to_vue_ls = "/Users/v.rykov/.config/nvm/versions/node/v20.19.0/lib/node_modules/@vue/language-server"
+-- Get node version
+local node_version = "v20.19.0"
+local io_handle = io.popen("node -v")
+
+if io_handle then
+  local result = io_handle:read("*a")
+  io_handle:close()
+  node_version = result:gsub("%s+$", "")
+end
+
+local path_to_vue_ls = "/Users/v.rykov/.config/nvm/versions/node/" .. node_version .. "/lib/node_modules/@vue/language-server"
 
 ---@type vim.lsp.Config
 return {
