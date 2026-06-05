@@ -9,8 +9,6 @@ if io_handle then
   node_version = result:gsub("%s+$", "")
 end
 
-print(xdg_config_home)
-
 local path_to_vue_ls = xdg_config_home .. "/nvm/versions/node/" .. node_version .. "/lib/node_modules/@vue/language-server"
 
 ---@type vim.lsp.Config
