@@ -1,6 +1,7 @@
 -- Get node version
 local node_version = "v20.19.0"
 local io_handle = io.popen("node -v")
+local xdg_config_home = os.getenv("XDG_CONFIG_HOME")
 
 if io_handle then
   local result = io_handle:read("*a")
@@ -8,7 +9,9 @@ if io_handle then
   node_version = result:gsub("%s+$", "")
 end
 
-local path_to_vue_ls = "/Users/v.rykov/.config/nvm/versions/node/" .. node_version .. "/lib/node_modules/@vue/language-server"
+print(xdg_config_home)
+
+local path_to_vue_ls = xdg_config_home .. "/nvm/versions/node/" .. node_version .. "/lib/node_modules/@vue/language-server"
 
 ---@type vim.lsp.Config
 return {
