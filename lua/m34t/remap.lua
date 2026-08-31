@@ -27,7 +27,11 @@ end, { desc = "Jump to prev error" })
 
 vim.keymap.set("n", "<leader>d", function()
   vim.lsp.buf.definition()
-end, { desc = "Jump to definition of symbol under cursor" })
+end, { desc = "Jump to definition of word under cursor" })
+
+vim.keymap.set("n", "<leader>r", function()
+  vim.lsp.buf.references()
+end, { desc = "Jump to references of word under cursor" })
 
 vim.keymap.set("n", "<leader>pc", function()
   vim.fn.setreg("+", vim.fn.expand("%:."))
